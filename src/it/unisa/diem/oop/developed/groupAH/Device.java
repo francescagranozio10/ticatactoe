@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package it.unisa.diem.oop.developed.groupAH;
 
 import java.time.LocalDate;
@@ -35,10 +40,6 @@ public abstract class Device implements Comparable<Device> {
         return storageCapacity;
     }
     
-    public int getAgeInYears() {
-        return java.time.Period.between(releaseDate, LocalDate.now()).getYears();
-    }
-    
     public abstract boolean hasTouchScreen();
     
     
@@ -66,7 +67,7 @@ public abstract class Device implements Comparable<Device> {
     
     @Override 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         sb.append("\nserialNumber= ");
         sb.append(getSerialNumber());
         sb.append("\nreleaseDate= ");
